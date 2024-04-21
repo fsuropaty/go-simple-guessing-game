@@ -6,9 +6,8 @@ import (
 	"time"
 )
 
-var guess, count int
-
 func game() {
+	var guess, count int
 	theNum := rand.Intn(100)
 	for guess != theNum {
 		fmt.Print("Try guessing : ")
@@ -38,7 +37,9 @@ func main() {
 		fmt.Print("Want to try again ? (y/n)")
 		fmt.Scan(&yn)
 		if yn != "y" {
+			isPlaying = false
 			return
+
 		}
 	}
 }
